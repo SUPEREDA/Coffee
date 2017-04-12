@@ -10,6 +10,7 @@
 }
 .plane .cockpit {
   height: 250px;
+  width: 350px;
   position: relative;
   overflow: hidden;
   text-align: center;
