@@ -203,6 +203,38 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">即時監控溫度濕度狀況</h2>
+                    <h3 class="intro-text text-center">
+                        <strong>IMMEDIATELY MONITORING TEMPERATURE AND HUMIDITY SITUATION</strong>
+                    </h3>
+                    <hr>
+                    <center>
+                        <iframe src="https://192.168.1.14:32785/freeboard/?r:306babb5b285a12115f6588ba02ab2b9#cdc2996c1f4011e79c1f99ee39cf083c" width="700" height="300" style="border:none;"></iframe>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!--<script>
+            var temp = document.getElementById("temp");
+            var hum = document.getElementById("hum");
+            setInterval(function(){
+                fetch("https://192.168.1.14:32785/t").then(function(response){
+                    return response.json()
+                }).then(function(status){
+                    temp.innerText = status.value
+                })
+                fetch("https://192.168.1.14:32785/h").then(function(response){
+                    return response.json()
+                }).then(function(status){
+                    hum.innerText = status.value
+                })
+            },500)
+        </script>-->
+
     </div>
     <!-- /.container -->
 
