@@ -263,7 +263,7 @@
                 }
 
               },
-              mounted() {
+              created() {
                 var self = this
                 setInterval(function () {
                   window.fetch("http://api.mingtsay.pro/ntust_restaurant/v1.0.0/table/").then(function (response) {
