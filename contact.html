@@ -28,6 +28,13 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        function submit() {
+            alert("完成寄出！");
+        }
+
+    </script>
+
 </head>
 
 <body>
@@ -119,7 +126,7 @@
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>電子郵件/Email Address/電子メールアドレス
-</label>
+                                </label>
                                 <input type="email" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
@@ -133,7 +140,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button type="submit" class="btn btn-default" onclick="alert('填寫完成!')">Submit</button>
                             </div>
                         </div>
                     </form>
