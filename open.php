@@ -1,3 +1,10 @@
+<?php
+include('connect.php'); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+header("location: profile.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <title>聯繫我們</title>
 
     <!-- Bootstrap Core CSS -->
@@ -61,7 +68,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html"><strong>店內飲品</strong></a>
+                        <a href="index.php"><strong>店內飲品</strong></a>
                     </li>
                     <li>
                         <a href="blog.html"><strong>咖啡的小孩</strong></a>
@@ -72,10 +79,10 @@
                     <li>
                         <a href="contact.html"><strong>聯繫我們</strong></a>
                     </li>
-                    <li>
-                        <a href="open.php"><strong>會員登入</strong></a>
-                    </li>
                     
+                    <li>
+                        <a href="ADD.html"><strong>還不是會員嗎?</strong></a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -83,70 +90,35 @@
         <!-- /.container -->
     </nav>
 
-   
+    <div class="container">
+     
+       
 
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">
-                        <strong>註冊會員</strong>
-                    </h2>
-                    <hr>
-                    
-                    <form name="form" method="post" action="register_finish.php">
-                    <form role="form">
+                   
                         <div class="row">
-                             <div class="form-group col-lg-4">
-                                <label >帳號/Username</label>
-                                <input  type="text" name="id" class="form-control">
-                            </div>
-                            <div class="clearfix"></div>
-                             
-                            <div class="form-group col-lg-4">
-                                <label>名字/Name</label>
-                                <input type="text" name="nam" class="form-control">
-                            </div>
-                             <div class="clearfix"></div>
-                            <div class="form-group col-lg-4">
-                                <label>電子郵件/Email 
-                                </label>
-                                <input type="email" name="emai" class="form-control">
-                            </div>
-                             
-                             <div class="clearfix"></div>
-                            <div class="form-group col-lg-4">
-                                <label>密碼/Password</label>
-                                <input type="password" name="pw" class="form-control">
-                            </div>
-                            <div class="clearfix"></div>
-                             <div class="form-group col-lg-4">
-                                <label>密碼再一次/Again</label>
-                                <input type="password" name="pw2" class="form-control">
-                            </div>
-                            <div class="clearfix"></div>
-                             <div class="form-group col-lg-4">
-                                <label>生日/Birthday(格式:19970101)</label>
-                                <input type="date" name="bir" class="form-control">
-                            </div>
-                            <div class="clearfix"></div>
-                             <div class="form-group col-lg-4">
-                                <label>通訊地址/Address</label>
-                                <input type="text" name="sddr" class="form-control">
-                            </div>
+                         <form  method="post" action="connect.php"> 
+                            
+                               
+                                
+                        帳號：<input type="text" name="id" /> <br>
+                        密碼：<input type="password" name="pw" /> <br>
+                        <input type="submit" name="button" value="登入" />&nbsp;&nbsp;
+                            </form>
                            
-                            <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default" onclick="alert('填寫完成!')">加入</button>
-                            </div>
+                            
                         </div>
-                    </form>
                 </div>
             </div>
         </div>
 
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- /.container -->
+
+
 
     <footer>
         <div class="container">
